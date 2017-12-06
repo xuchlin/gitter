@@ -1,0 +1,19 @@
+第一步：把QRCode拷贝你磁盘根目录下比如：d:
+
+第二步：打开cmd命令窗口，
+mvn install:install-file -Dfile=d:\QRCode.jar -DgroupId=QRCode -DartifactId=QRCode -Dversion=3.0 -Dpackaging=jar
+把qrcode.jar安装到本地仓库中,从这里告诉你一个答案：
+1:maven中央仓库不是什么都有，有写依赖jar包必须要收到安装到本地仓库中
+才能进行依赖
+2:未来如果开发过程中，也可以通过这个命令安装其他的jar包到仓库中。
+
+第三步：在项目工程中年pom.xml文件把下面依赖进去
+
+<dependency>
+ <groupId>QRCode</groupId>
+ <artifactId>QRCode</artifactId>
+ <version>3.0</version>
+</dependency> 
+
+第四步：把util下面的类放入:QRcodeUtil.java项目里，
+第五步：执行看效果，
