@@ -1,0 +1,363 @@
+﻿body {
+}
+.LayoutForm
+{}
+.LayoutForm div
+{
+    /*display:inline-block;*/
+}
+.LayoutGrid
+{
+    font-size:12px;
+    border: 1px solid #99bbe8;
+    overflow:hidden;    
+}
+.LayoutGridDataDiv
+{
+    width:100%;
+    height:100%;
+    display:block;
+    overflow:hidden;
+}
+.LayoutGridPaper
+{
+    font-size:12px;
+    width:100%;
+    overflow:hidden;
+    height:25px; 
+    border: 0px solid #DBD3BD;
+    background-color: #E3EAEB;
+}
+.LayoutGridTable
+{   
+    table-layout:fixed;
+    font-size: 12px;
+}
+.LayoutGridTable td
+{
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #E6E6E6;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #E6E6E6;
+    font-size: 12px;
+    height: 22px;
+    cursor: default;
+    margin-left:2px;
+    margin-right:2px;
+    display:inline-block;
+}
+.LayoutGridTable input
+{
+    width: 100%;
+	height: 100%;
+	border-right: 0px;
+	border-top: 0px;
+	font-weight: normal;
+	font-size: 12px;
+	padding-top:0px;
+	border-left: 0px;
+	border-bottom: 0px;
+}
+.LayoutGridTable_divFreeze
+{
+    float: left;
+    overflow: hidden;
+}
+.LayoutGridTable_divData
+{
+    float: right;
+    overflow: hidden;
+}
+.LayoutGridTableHeader
+{
+    background-color: #f9f9f9;
+    background-image: url(GridHeaderBg.gif);
+    background-position: left center;
+}
+.LayoutGridTableHeader td
+{
+    font-weight: bold;
+    height: 25px;
+}
+.LayoutGridHeaderDiv
+{
+    height: 100%;
+    line-height: 25px;
+    vertical-align: middle;
+    cursor: default;
+}
+.LayoutGridHeaderDiv_over
+{
+    line-height: 25px;
+    vertical-align: middle;
+    height: 100%;
+    cursor: default;
+    background-image: url(GridHeaderBg_over.gif);
+    background-position: left center;
+}
+.LayoutGridHeaderDiv_active
+{
+    line-height: 25px;
+    vertical-align: middle;
+    height: 100%;
+    cursor: default;
+    background-image: url(GridHeaderBg_over.gif);
+    background-position: left center;
+}
+.LayoutGridHeaderDiv_active a
+{
+    width: 14px;
+    height: 100%;
+    float: right;
+    background-position: 0px center;
+}
+.LayoutGridSorialNo
+{
+    background-image: url(GridFreezebg.gif);
+}
+.LayoutGridHeaderDiv a
+{
+    width: 14px;
+    height: 100%;
+    float: right;
+    background-position: 0px center;
+}
+.LayoutGridHeaderDiv_over a
+{
+    background-image: url(GridHeaderBtn.gif);
+    width: 14px;
+    height: 100%;
+    float: right;
+    background-position: left center;
+}
+.LayoutGridHeaderDiv_over a:hover
+{
+    background-image: url(GridHeaderBtn.gif);
+    width: 14px;
+    height: 100%;
+    float: right;
+    background-position: -14px center;
+}
+.LayoutGridBodyRow_over td
+{
+    background-image: url(row-over.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-color: #efefef;
+}
+.LayoutGridBodyRow_over .GridSorialNo
+{
+    background-image: url(GridFreezebg_over.gif);
+    background-repeat: repeat;
+}
+.LayoutGridBodyRow_sel .GridSorialNo
+{
+    background-image: url(GridFreezebg_sel.gif);
+    background-repeat: repeat;
+}
+
+.LayoutGridBodyRow_sel td
+{
+    border: dotted 1px #b8cfee;
+    background-color: #d9e8fb;
+    background-image: url(row-sel.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+.LayoutGridBodyRow_selected td
+{
+    border: dotted 1px #b8cfee;
+    background-color: #bae4e7;
+    background-image: url(row-selected.gif);
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+.LayoutGridBodyRow_selected .GridSorialNo
+{
+    background-image: url(GridFreezebg_selected.gif);
+    background-repeat: repeat;
+}
+
+
+
+.LayoutArea
+{
+    table-layout:fixed;
+    font-size: 12px;        
+}
+
+.LayoutArea_Normal
+{
+    border-top: 0px solid #222222;
+    border-left: 0px solid #222222;    
+    border-bottom:0px;
+    border-right:0px;
+}
+.LayoutAreaTable_Normal
+{
+    width:100%;
+    table-layout:fixed;
+    font-size: 12px;
+}
+
+.LayoutAreaTable_Normal td
+{   
+    border-right: 0px solid #222222;
+    border-bottom: 0px solid #222222;
+    font-size: 12px;
+    height: 25px;
+    cursor: default;
+    margin-left:2px;
+    margin-right:2px;
+    padding-right:6px;    
+}
+
+.LayoutArea_Print
+{
+    border-top: 1px solid #222222;
+    border-left: 1px solid #222222;    
+    border-bottom:0px;
+    border-right:0px;
+}
+.LayoutAreaTable_Print
+{
+    table-layout:fixed;
+    font-size: 12px;
+    display:inline-block;
+}
+
+.LayoutAreaTable_Print td
+{   
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    font-size: 12px;
+    height: 25px;
+    cursor: default;
+    margin-left:2px;
+    margin-right:2px;
+    padding-right:6px;
+    display:inline-block;
+}
+
+
+.activeInputCell
+{
+    background-color: #C2EBFC;
+}
+.activeInputCell input
+{
+    background-color: #C2EBFC;
+}
+
+
+.NotEmptyInputCell
+{    
+    color: #a50606;
+}
+
+/*以下为PopupEdit CSS定义*/
+.PopupEdit {
+    width: 125px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+.PopupEdit-border {
+    background: white;
+    border: solid 1px #a5acb5;
+    width: auto;
+    height: 19px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-right: 22px;
+    padding-left: 1px;
+}
+.PopupEdit-input {
+    background: none;
+    background: url(about:blank) no-repeat\0;
+    border: 0;
+    line-height: 19px;
+    font-family: Verdana;
+    font-size: 9pt;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    z-index: 1;
+    cursor: text;
+    width: 100%;
+    height: 19px;
+    float: left;
+    _position: absolute;
+    _left: 2px;
+    _top: 0px;
+}
+.PopupEdit-buttons {
+    clear: both;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.PopupEdit-button {
+    border: 0px;
+    padding: 1px;
+    background: none;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-right: 1px;
+    display: inline-block;
+    z-index: 10;
+    vertical-align: top;
+}
+.PopupEdit-icon {
+    display: block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background: url(icoPupop.gif) no-repeat 50% 50%;
+}
+
+.PopupEdit-button-hover
+{
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-right: 1px;
+    display: inline-block;
+    z-index: 10;
+    vertical-align: top;
+    border:1px solid #ababab;
+    padding:0;
+    background:#dde6fe url(hover.png) repeat-x 0 0;   
+}
+
+.PopupEdit-button-pressed
+{
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-right: 1px;
+    display: inline-block;
+    z-index: 10;
+    vertical-align: top;
+
+    border:1px solid #888;
+    padding:0;
+    background:#DBDDE2 url(pressed.png) repeat-x 0 0;    
+}
+
+.NormalInputCell {
+}
+.NormalCaptionCell {
+    font-weight:bold;
+}

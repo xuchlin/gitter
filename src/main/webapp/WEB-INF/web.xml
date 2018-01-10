@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <!--context-param它会自动给applicaiton对象赋值 ServletContext
+        request
+    HttpSession session = request.getSession();
+    ServletContext application = request.getSevletContext();
+    application.setAttribute("contextConfigLocation","classpath:applicationContext.xml")
+    -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:applicationContext.xml
+        </param-value>
+    </context-param>
+
+    <!--
+    RequestContextListener将Spring容器与Web容器结合的更加密切。这是可选配置，并且后者与scope=”request”搭配使用：
+    spring在装配对象的时候采用的都是单列模式装配，声明周期都是由spring容器来控制和销毁，如你想在HTTP请求完毕以后销毁内容的对象
+    可以配置下面代码。
+    而RequestContextListener实现ServletRequestListener监听器接口，该监听器监听HTTP请求事件，
+    web服务器接收的每一次请求都会通知该监听器。
+    -->
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
+    <!--
+        webapplicationContext的初始化启动需要依赖ServletContext来完成，也就是说它需要拥有web容器的前提下
+        才能完成启动工作，Spring分别是使用ContextLoaderListener或者ContextLoaderServlet来完成WebApplicationContext的初始化操作
+        ContextLoaderListener通过web容器上下文参数contextConfigLocation获取spring配置文件位置，用户可以指定多个配置文件
+        用逗号，空格，分号分隔均可。
+    -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- 二期新增重置session时间的filter -->
+    <!--<filter>
+        <filter-name>sessionExpireFilter</filter-name>
+        <filter-class>com.mmall.controller.common.SessionExpireFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sessionExpireFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>-->
+
+
+    <!-- spring session框架和自己实现的redis二选一 -->
+    <!--<filter>-->
+    <!--<filter-name>springSessionRepositoryFilter</filter-name>-->
+    <!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>springSessionRepositoryFilter</filter-name>-->
+    <!--<url-pattern>*.do</url-pattern>-->
+    <!--</filter-mapping>-->
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>namespace</param-name>
+            <param-value>mkspringmvc</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- RESTful -->
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<!-- 拦截所有 -->
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<!-- 拦截所有 -->
+		<url-pattern>*.jpg</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<!-- 拦截所有 -->
+		<url-pattern>*.png</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<!-- 拦截所有 -->
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+</web-app>
+

@@ -1,0 +1,189 @@
+﻿
+
+/**************购物车相关样式******************/
+.m-sidebar {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    z-index: 2000;
+    width: 35px;
+    height: 100%;
+    font-size: 12px;
+    /*border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;*/
+    color: #666;
+    /*background-color: #eee;*/
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.m-num ,.m-num span{
+    display: inline;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #148602;
+}
+
+.m-num-sidebar {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2009;
+    height: 35px;
+    line-height: 35px;
+    min-width: 80px;
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    color: #075501;
+    background-color: #eee;
+    -webkit-transform: translate3d(0, 0, 0);
+    background-color: #bec7c2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0px auto;
+}
+
+    .m-num-sidebar input[type=button] {
+        margin-left: 30px;
+    }
+
+.m-sidebar .prevCart {
+    /*padding: 200px 0 0 0px;*/
+    /*height: 30%;*/
+}
+
+.m-sidebar .cart:hover {
+    background-color: #fff;
+    border-color: #eee;
+}
+
+    .m-sidebar .cart:hover a {
+        width: 35px;
+        height: 35px;
+        display: block;
+        background: url('../Images/car_over.png') no-repeat;
+    }
+
+.m-sidebar .cart {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    background-color: #bec7c2;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+    .m-sidebar .cart span {
+        display: block;
+        width: 20px;
+        margin: 0 auto;
+    }
+
+    .m-sidebar .cart a {
+        width: 29px;
+        height: 29px;
+        margin: 3px;
+        display: block;
+        background: url('../Images/car.png') no-repeat;
+        font-family: tb-toolbar-iconfont;
+    }
+
+
+
+    .m-sidebar .cart:hover {
+        background-color: #fff;
+        border-color: #eee;
+    }
+
+        .m-sidebar .cart:hover a {
+            width: 29px;
+            height: 29px;
+            margin: 3px;
+            display: block;
+            background: url('../Images/car_over.png') no-repeat;
+        }
+
+
+
+.tabcart {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    line-height: 29px;
+    height: 29px;
+    cursor: pointer;
+}
+
+    .tabcart span {
+        display: inline-block;
+        margin: 0 auto;
+        line-height: 29px;
+        height: 29px;
+    }
+
+#tabCartEnd {
+    width: 29px;
+    height: 29px;
+    line-height: 29px;
+    display: inline-block;
+    /*background: url('../Images/car.png') no-repeat;*/
+}
+
+.tabcart .cartNum {
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.tabcart:hover #tabCartEnd {
+    /*background: url('../Images/car_over.png') no-repeat;*/
+}
+
+#cartMsg {
+    position: fixed;
+    top: 250px;
+    right: 35px;
+    z-index: 10000;
+    width: 1px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    background: #ff0000;
+    display: none;
+}
+
+.m-sidebar .cartNum {
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+
+.u-flyer {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 9999;
+}
